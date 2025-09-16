@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true, // so next/image works in Netlify
+    unoptimized: true,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
