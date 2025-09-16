@@ -1,0 +1,72 @@
+/* app/components/ProductCard.module.css */
+
+.cardWrap {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.tagBadge {
+
+  letter-spacing: 0.3px;
+}
+
+.imageWrap {
+  height: 180px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.body {
+  padding-top: 0.5rem;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 1.4;
+  /* font-family: "montserrat", Arial, sans-serif; */
+  margin-bottom: 0.35rem;
+  color: #212529;
+}
+
+.ratingRow {
+  column-gap: 8px; /* acts like gap for inline-row in modern browsers */
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+}
+
+
+.stars {
+  color: #f5a623;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.desc {
+  /* font-family: "montserratmed", "montserrat", Arial, sans-serif; */
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.ctaBtn {
+  background-color: #0077b6;
+  border-color: #0077b6;
+  /* font-family: "montserrat", Arial, sans-serif; */
+}
+
+.ctaBtn:hover,
+.ctaBtn:focus {
+  background-color: #005f8f;
+  border-color: #005f8f;
+}

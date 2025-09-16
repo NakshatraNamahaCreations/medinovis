@@ -1,0 +1,188 @@
+/* Container helper (reuse your site container if you have one) */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== Wrap & Background ===== */
+.t-wrap {
+  background: #f7f7f7;
+  padding: 36px 0 64px;
+}
+
+/* ===== STATS ===== */
+.t-stats {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  overflow: hidden;
+}
+
+.t-stat {
+  position: relative;
+  padding: 28px 12px 24px;
+  text-align: center;
+}
+
+.t-stat-value {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  color: #0ea5e9; /* warm coral like reference */
+  letter-spacing: 0.5px;
+}
+
+.t-stat-label {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #505050;
+}
+
+/* vertical divider */
+.t-divider {
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 44px);
+  background: #e7e7e7;
+}
+
+/* ===== Slider Section ===== */
+.t-sliderWrap {
+  margin-top: 40px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.t-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+/* Quote card */
+.t-quoteCard {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  box-shadow: 0 12px 30px rgba(0,0,0,.05);
+  padding: 32px 32px 22px;
+}
+
+.t-quote {
+  color: #616161;
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+.t-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.t-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.t-name {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ===== Slick overrides (keep tiny dots + coral arrows like screenshot) ===== */
+/* Dots */
+.t-slider .slick-dots {
+  margin-top: 12px !important;
+  position: static;
+}
+
+.t-slider .slick-dots li {
+  margin: 0 3px;
+}
+
+.t-slider .slick-dots li button:before {
+  content: "";
+}
+
+.t-slider .slick-dots li button {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #cfcfcf;
+}
+
+.t-slider .slick-dots li.slick-active button {
+  background: #333;
+}
+
+/* Arrows (no background, coral color) */
+.t-slider .slick-prev,
+.t-slider .slick-next {
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+}
+
+.t-slider .slick-prev:before,
+.t-slider .slick-next:before {
+  content: "";
+}
+
+.t-slider .slick-prev,
+.t-slider .slick-next {
+  background: transparent;
+}
+
+.t-slider .slick-prev {
+  left: -4px;
+}
+.t-slider .slick-next {
+  right: -4px;
+}
+
+/* arrow icons via border trick */
+.t-slider .slick-prev,
+.t-slider .slick-next {
+  position: absolute;
+  top: calc(50% - 22px);
+  border-radius: 50%;
+}
+
+.t-slider .slick-prev::after,
+.t-slider .slick-next::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-right: 3px solid #0ea5e9;
+  border-bottom: 3px solid #0ea5e9;
+  transform: rotate(135deg);
+}
+
+.t-slider .slick-next::after {
+  transform: rotate(-45deg);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .t-stats { grid-template-columns: 1fr; }
+  .t-divider { display: none; }
+  .t-stat-value { font-size: 44px; }
+  .t-quote { font-size: 18px; }
+}

@@ -1,0 +1,112 @@
+/* ===== FOOTER WRAPPER ===== */
+.footer {
+  background: #fafafa;
+  padding-top: 40px;
+  font-family: Arial, sans-serif;
+  color: #333; /* unified text color */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* ===== TOP SECTION ===== */
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer__title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer__col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__col ul li {
+  margin-bottom: 8px;
+}
+
+.footer__col a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer__col a:hover {
+  color: #0ea5e9;
+}
+
+/* ===== SOCIAL ===== */
+.footer__social {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.footer__social-icon {
+  font-size: 18px;
+  background: #eee;
+  padding: 8px;
+  border-radius: 4px;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__social-icon:hover {
+  color: #0ea5e9;
+  color: #fff;
+}
+
+/* ===== DIVIDER ===== */
+.footer__divider {
+  margin: 30px auto;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* ===== BADGES ===== */
+.footer__badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer__badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer__badge h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #333;
+}
+
+.footer__badge p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+/* ===== BOTTOM ===== */
+.footer__bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  padding: 20px 0;
+}

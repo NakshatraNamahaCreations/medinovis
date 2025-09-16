@@ -1,0 +1,130 @@
+/* Layout container like your screenshots */
+.container{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== Header wrapper ===== */
+.siteHeader{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: #ffffff; /* bg */
+}
+
+/* ===== Top info strip (blue) ===== */
+.topBar{
+  background: #0c7fb3; /* brand */
+  color: #fff;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.topBarRow{
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  font-weight: 700;
+}
+.topItem{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  opacity: .95;
+}
+
+/* ===== Main bar ===== */
+.mainBar{
+  border-bottom: 1px solid #f1f2f4; /* line */
+  background: #ffffff; /* bg */
+}
+.mainRow{
+  height: 64px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* Brand */
+.brandWrap{
+  display: flex;
+  align-items: center;
+}
+.brand{
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  text-decoration: none;
+  color: #0c7fb3; /* brand */
+}
+
+/* Tabs (1mg style) */
+.navTabs{
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+.tabLink{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 0;
+  text-decoration: none;
+  color: #111827; /* ink */
+  text-transform: uppercase;
+  letter-spacing: .2px;
+  font-weight: 700;
+  line-height: 21px;
+  font-size: 14px;
+}
+.tabLink:hover{
+  color: #0c7fb3; /* accent */
+}
+.tabLink.active{
+  color: #0c7fb3; /* accent */
+}
+
+/* short underline (like your black navbar) */
+.tabLink.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 155px;             /* short underline length */
+  max-width: 100%;
+  height: 3px;
+  background: #0c7fb3;      /* accent */
+  border-radius: 2px;
+}
+
+/* Right CTA */
+.rightSide{
+  display: flex;
+  align-items: center;
+}
+.ctaBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #06b6d4;      /* cta */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .2px;
+  box-shadow: 0 8px 22px rgba(6, 182, 212, .25);
+}
+.ctaBtn:hover{
+  filter: brightness(.95);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  .navTabs{ display: none; }
+  .mainRow{ grid-template-columns: 1fr auto; }
+  .brand{ font-size: 24px; }
+}

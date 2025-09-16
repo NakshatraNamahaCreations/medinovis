@@ -1,0 +1,56 @@
+/* container + grid (same layout, same sizes) */
+.alt-wrapper{ padding:0 12px; margin:0 auto; background-color: #f6f6f6; }
+.alt-grid{ display:grid; grid-template-columns:2fr 1fr; gap:12px; align-items:stretch; }
+
+/* left “glass card” */
+.alt-left{ background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+.alt-shell{ position:relative; }
+
+/* react-slick basics */
+.slick-slider{ width:100%; }
+.slick-list{ overflow:hidden; }
+.slick-track{ display:flex; }
+
+.alt-slide{ width:100%; }
+.alt-link{ display:block; }
+
+/* keep EXACT banner height: 250px */
+.alt-frame{ width:100%; height:250px; position:relative; overflow:hidden; border-radius:12px; }
+.alt-img{ width:100%; height:100% !important; object-fit:cover; display:block; border-radius:12px; }
+
+/* soft gradient at bottom (optional) */
+.alt-grad{
+  position:absolute; left:0; right:0; bottom:0; height:48px;
+  background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.12) 100%);
+  pointer-events:none;
+}
+
+/* overlaid nav buttons */
+.alt-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:38px; height:38px; border-radius:999px;
+  background:rgba(255,255,255,0.85); border:1px solid #e5e7eb; color:#111;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+.alt-prev{ left:10px; }
+.alt-next{ right:10px; }
+.alt-nav:hover{ background:#fff; }
+
+/* dots: compact pills, centered */
+.altDots{ display:flex !important; gap:8px; align-items:center; justify-content:center; margin:6px 0 10px; padding:0; list-style:none; }
+.altDotBtn{ width:18px; height:6px; border-radius:6px; background:#d1d5db; border:0; cursor:pointer; }
+.slick-dots li.slick-active button.altDotBtn{ background:#0ea5e9 !important; }
+
+/* right column (same height!) */
+.alt-right{ background:transparent; }
+.alt-sideLink{ display:block; }
+.alt-sideImg{ width:100%; min-height:250px; max-height:250px; object-fit:cover; border-radius:12px; display:block; }
+
+/* responsive: same behavior as before */
+@media (max-width:992px){
+  .alt-grid{ grid-template-columns:1fr; }
+  .alt-frame{ height:200px; }
+  .alt-sideImg{ min-height:160px; max-height:160px; }
+}
+

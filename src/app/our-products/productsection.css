@@ -1,0 +1,128 @@
+/* Section + container */
+.productsSection {
+  padding: 50px 20px;
+  background: #f9f9f9;
+   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.kicker {
+  color: #00b4d8;
+ font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.heading {
+  color: #0077b6;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  text-align: center;
+  margin: 12px 0 0; /* replaces mt-3 */
+}
+
+.productsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px; /* replaces mt-4 */
+}
+
+/* Card helpers if you want to use them (for non-Bootstrap cards) */
+.productCard {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 410px;
+  width: 330px;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Optional: CTA button that slides up on hover */
+.knowMoreBtn {
+  position: absolute;
+  bottom: -50px; /* hidden initially */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: bottom 0.3s ease;
+  /* font-family: "montserrat", Arial, sans-serif; */
+}
+
+.productCard:hover .knowMoreBtn {
+  bottom: 20px; /* slides up on hover */
+}
+
+/* Image/title/desc helpers */
+.productImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.productTitle {
+  color: #0c7fb3;
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* font-family: "montserrat", Arial, sans-serif; */
+  text-align: left;
+}
+
+.productDesc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  /* font-family: "montserrat", Arial, sans-serif; */
+  text-align: left;
+}
+
+.productPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  font-size: 14px;
+  text-align: left;
+  /* font-family: "montserrat", Arial, sans-serif; */
+  color: #595959;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productBtn {
+  background: #0c2e60;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.productBtn:hover {
+  background: #0a234b;
+}
+
+.productIcon {
+  margin-bottom: 10px;
+  color: #0a234b;
+  font-size: 40px;
+}

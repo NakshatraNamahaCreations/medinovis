@@ -1,0 +1,65 @@
+/* Dark strip container (brand color or neutral) */
+.crumbbar {
+  background: #333;             /* brand blue from your site */
+  padding: 12px 0;                 /* match navbar spacing */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04),
+              0 1px 0 rgba(0,0,0,0.06);
+              margin: 0 auto;
+              width: 100%;
+             
+}
+
+/* Center inner row */
+.crumbbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Breadcrumb list */
+.crumbbar__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;                 /* matches your body text */
+
+  line-height: 1.4;
+}
+
+/* Breadcrumb items */
+.crumbbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Links */
+.crumbbar__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.crumbbar__link:hover {
+  text-decoration: underline;
+}
+
+/* Current page */
+.crumbbar__current {
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Chevron divider */
+.crumbbar__chev {
+  color: #ddd;                     /* softer divider color */
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .crumbbar__list { font-size: 14px; }
+}

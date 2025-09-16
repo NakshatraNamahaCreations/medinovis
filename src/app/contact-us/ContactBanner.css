@@ -1,0 +1,80 @@
+/* Section with soft medical pattern background */
+.contact-banner {
+  /* background pattern similar to your reference */
+  background:
+    radial-gradient(#f4f6f8 1px, transparent 1px) 0 0/26px 26px,
+    radial-gradient(#f4f6f8 1px, transparent 1px) 13px 13px/26px 26px,
+    #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Inner grid with equal left/right padding */
+.cb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px clamp(20px, 4vw, 40px);
+  min-height: 420px;                 /* matches the requested banner height */
+  display: grid;
+  grid-template-columns: 1fr 1fr;    /* equal gaps left & right via padding */
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+}
+
+/* Breadcrumbs (matching the style you used earlier) */
+.cb-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5f6b7a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.cb-crumb {
+  color: #0c7fb3;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cb-crumb:hover { text-decoration: underline; }
+.cb-sep { color: #b7c0c9; }
+.cb-current { color: #1f2a37; font-weight: 600; }
+
+/* Heading + sub copy */
+.cb-title {
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: #1f2a37;
+  margin: 6px 0 8px;
+}
+.cb-sub {
+  font-size: 16px;
+  color: #475569;
+  max-width: 46ch;
+  margin: 0;
+}
+
+/* Right column: centered illustration */
+.cb-visual {
+  display: grid;
+  place-items: center;     /* centers the artwork within the column */
+}
+.cb-img, .cb-svg {
+  width: 100%;
+  max-width: 640px;        /* keep it balanced */
+  height: auto;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .cb-inner {
+    grid-template-columns: 1fr;  /* stack */
+    min-height: unset;           /* let height adapt on mobile */
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .cb-visual { order: -1; }      /* illustration on top, text below (optional) */
+  .cb-title { text-align: left; }
+  .cb-sub { max-width: 60ch; }
+}

@@ -1,0 +1,69 @@
+.mv-section {
+  background: #d1f0ee; /* soft healthcare tone like reference */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mv-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.mv-subheading {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.mv-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.mv-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  max-width: 800px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+}
+
+.mv-icon img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.mv-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.mv-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mv-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
